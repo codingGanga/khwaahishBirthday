@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.body{
+    padding: 10px;
+    --border-size: 3px;
+    --border-angle: 0turn;
+    width: 98%;
+    height: 50vmin;
+    background-image: conic-gradient(from var(--border-angle), #213, #112 50%, #213), conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2)) calc(100% - (var(--border-size) * 2)), cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bg-spin 3s linear infinite;
+}
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+   }
+}
+.box:hover {
+    animation-play-state: paused;
+}
+@property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+}
+
+
+
+
+.header > img{
+    height: 300px;
+    width: 300px;
+}
+
+.header-image{
+    display: flex;
+    align-items: center;
+}
+
+.header-middle{
+    width: 50%;
+}
+.header-middle > h1{
+    font-size: 60px;
+    margin-left: 5%;
+}
+.header-image > img{
+    margin-left: 25%;
+}
+.header-image > h1{
+    font-size: 34px;
+}
+
+.glow {
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+@-webkit-keyframes glow {
+from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007be6, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+}
+}
+    
